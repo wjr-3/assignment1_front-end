@@ -1,0 +1,40 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="header">
+    <button class="add-btn" bindtap="goToAdd">添加同学</button>
+  </view>
+  
+  <view class="search-box">
+    <input 
+      class="search-input" 
+      placeholder="搜索姓名或手机号" 
+      value="{{searchKeyword}}"
+      bindinput="onSearchInput"
+    />
+  </view>
+  
+  <view class="contact-list">
+    <view 
+      class="contact-item" 
+      wx:for="{{filteredContacts}}" 
+      wx:key="id"
+      bindtap="goToEdit"
+      data-id="{{item._id}}"
+    >
+      <view class="contact-info">
+        <text class="name">{{item.name}}</text>
+        <text class="phone">{{item.phone}}</text>
+        <text class="class">{{item.class || '班级未填写'}}</text>
+        <text class="remark" wx:if="{{item.remark}}">{{item.remark}}</text>
+      </view>
+      <view class="contact-actions">
+        <!-- 使用 catchtap 防止事件冒泡 -->
+        <button class="delete-btn" catchtap="deleteContact" data-id="{{item._id}}">删除</button>
+      </view>
+    </view>
+    
+    <view class="empty-state" wx:if="{{filteredContacts.length === 0}}">
+      <text>暂无联系人</text>
+    </view>
+  </view>
+</view>

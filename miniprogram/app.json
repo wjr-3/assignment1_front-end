@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/add/add",
+    "pages/edit/edit"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#4285f4",
+    "navigationBarTitleText": "同学通讯录",
+    "navigationBarTextStyle": "white"
+  }
+}

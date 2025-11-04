@@ -1,0 +1,51 @@
+<!-- pages/edit/edit.wxml -->
+<view class="container">
+  <form bindsubmit="updateForm">
+    <view class="form-group">
+      <label class="label">姓名 *</label>
+      <input 
+        class="input" 
+        name="name" 
+        placeholder="请输入同学姓名" 
+        value="{{formData.name}}"
+        bindinput="onNameInput"
+      />
+    </view>
+    
+    <view class="form-group">
+      <label class="label">手机号 *</label>
+      <input 
+        class="input" 
+        name="phone" 
+        placeholder="请输入手机号码" 
+        value="{{formData.phone}}"
+        bindinput="onPhoneInput"
+        type="number"
+      />
+    </view>
+    
+    <view class="form-group">
+      <label class="label">班级</label>
+      <input 
+        class="input" 
+        name="class" 
+        placeholder="请输入班级" 
+        value="{{formData.class}}"
+        bindinput="onClassInput"
+      />
+    </view>
+    
+    <view class="form-group">
+      <label class="label">备注</label>
+      <textarea 
+        class="textarea" 
+        name="remark" 
+        placeholder="请输入备注信息" 
+        value="{{formData.remark}}"
+        bindinput="onRemarkInput"
+      />
+    </view>
+    
+    <button class="submit-btn" form-type="submit">更新</button>
+  </form>
+</view>
