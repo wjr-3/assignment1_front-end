@@ -1,3 +1,6 @@
+Notice:  This is the front-end framework of this wechat mini-program. As it relies on the basic framework of the cloud development platform that comes with the wechat mini-program development platform, some unnecessary parts have not been changed.
+
+
 This mini-program development is based on wechat developer tools and a cloud development environment.
 
 Basic framework
